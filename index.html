@@ -1,1 +1,150 @@
-<h1>Games</h1><ul><li><a href="/jacksmith/">Jacksmith</a></li><li><a href="/pizza/">Papa\'\''s Pizzeria</a></li></ul>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Games</title>
+  <style>
+    :root {
+      --bg1: #0f172a;
+      --bg2: #1e293b;
+      --card: rgba(255, 255, 255, 0.08);
+      --card-border: rgba(255, 255, 255, 0.14);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --button: #38bdf8;
+      --button-hover: #0ea5e9;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, #1d4ed8 0%, transparent 30%),
+        radial-gradient(circle at bottom right, #7c3aed 0%, transparent 25%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      line-height: 1.05;
+    }
+
+    .hero p {
+      margin: 0;
+      font-size: 1.1rem;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 36px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 28px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+    }
+
+    .card p {
+      margin-top: 0;
+      margin-bottom: 24px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .play-btn {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      color: #00111a;
+      background: var(--button);
+      font-weight: 800;
+      font-size: 1.2rem;
+      padding: 18px 22px;
+      border-radius: 18px;
+      transition: transform 0.15s ease, background 0.15s ease;
+      box-shadow: 0 10px 25px rgba(14, 165, 233, 0.35);
+    }
+
+    .play-btn:hover {
+      background: var(--button-hover);
+      transform: translateY(-2px);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 640px) {
+      .card {
+        padding: 22px;
+      }
+
+      .play-btn {
+        font-size: 1.1rem;
+        padding: 16px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>My Games</h1>
+      <p>Pick a game and start playing.</p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Jacksmith</h2>
+        <p>Forge weapons, equip your warriors, and push through the battlefield.</p>
+        <a class="play-btn" href="./jacksmith/">Play Jacksmith</a>
+      </article>
+
+      <article class="card">
+        <h2>Papa&rsquo;s Pizzeria</h2>
+        <p>Take orders, bake pizzas, slice them right, and keep customers happy.</p>
+        <a class="play-btn" href="./pizza/">Play Papa&rsquo;s Pizzeria</a>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
